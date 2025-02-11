@@ -44,6 +44,8 @@ def main():
     is_tie = False
     clear_console()
     board = Board()
+    print("Board Order:")
+    print_board_order()
     board.print_board()
     game(board, current_player, game_won, is_tie)
     play_again = input("Would you like to play again? (y/n)\n")
@@ -60,6 +62,12 @@ def clear_console():
     if os.environ.get("TERM") is not None:
         subprocess.run(["clear"])
 
+def print_board_order():
+    print(" 1 | 2 | 3")
+    print("---|---|---")
+    print(" 4 | 5 | 6")
+    print("---|---|---")
+    print(" 7 | 8 | 9")
 
 if __name__ == "__main__":
     main()
